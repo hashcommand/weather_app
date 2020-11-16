@@ -6,6 +6,8 @@ const hbs = require('hbs');
 const query = require('query');
 const request   = require('request');
 
+const prot = process.env.PORT || 3000;
+
 //Loading Custom Procedures
 const fetchGeoCode  = require('./utils/geoCode');
 const fetchLocKey   = require('./utils/locationKey');
@@ -152,6 +154,6 @@ app.get('*', (req, res)=>{
 })
 
 //to firing up the server use the following command:
-app.listen(3000, ()=>{
-    console.log("Server is listening on Port: 3000");
+app.listen(prot, ()=>{
+    console.log("Server is listening on Port: " + port);
 })
